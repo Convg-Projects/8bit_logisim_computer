@@ -852,7 +852,23 @@ void setup(){
     String lineNumber = Integer.toHexString(i);
     lineNumber = AddChars(lineNumber, '0', 4);
     
-    print(lineNumber + ": ");
+    println(lineNumber + ": " + line);
+    output.println(lineNumber + ": " + line);
+  }
+  
+  long[] interruptVector = {
+    (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+    0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+  };
+  
+  for(int j = 0; j < data.length; ++j){
+    String line = Long.toHexString(interruptVector[j - (j/16) * 16]);
+    line = AddChars(line, '0', 16);
+  
+    String lineNumber = Integer.toHexString(j);
+    lineNumber = AddChars(lineNumber, '0', 4);
+    
+    println(lineNumber + ": " + line);
     println(line);
     output.println(lineNumber + ": " + line);
   }

@@ -205,26 +205,26 @@ GBE|GRI,        SCR,            0,              0,              0,              
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|OLI|CE,      CBO|MBI,        CLO|MLI,        RO|MBI|OBI|CE,  OLO|MLI,        ALO|RI,         SCR,            0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //STL: 2c
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|CXI|CE,      CBO|MBI,        CLO|MLI,        RO|CYI|CE,      SCR,            0,              0,              0,              0,              0,
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|CXI,        ABO|CYI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CCI: 2d
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|CXI|CE,      SCR,            0,              0,              0,              0,              0,              0,              0,              0,
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|CXI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CCX: 2e
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|CYI|CE,      SCR,            0,              0,              0,              0,              0,              0,              0,              0,
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|CYI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CCY: 2f
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|CW,         SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CCW: 30
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CC,             SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CLC: 31
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|TW,         SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //TDW: 32
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CT,             SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CTD: 33
 
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //

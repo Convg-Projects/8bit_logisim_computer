@@ -71,8 +71,8 @@ static final long INX = 0b100000000000000000000000000000000000000000000000000000
 
 static final long[] data = {
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //NOP: 00
-
+0,              0,              0,              0,              0,              SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //NOP: 00
+                                            //Second SCR is for interrupt vector ^
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|ALI|CE,      CBO|MBI,        CLO|MLI,        RO|ABI|CE,      SCR,            0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //LIA: 01
 
@@ -197,13 +197,13 @@ LSL|EBO|ABI,    OLO|ALI,        SCR,            0,              0,              
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //GWB: 29
 
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|OLI|XLI|CE,  CBO|MBI,        CLO|MLI,        RO|MBI|XBI|CE,  OLO|MLI,        RO|GDI|GCE,     GBE|GRI|INX,    XLO|MLI,        XBO|MBI,        RO|GDI|GCE,
-GBE|GRI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //GWW: 2a
+GBE|GRI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //GWI: 2a
 
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             GRF,            SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //GRF: 2b
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             CBO|MBI,        CLO|MLI,        RO|OLI|CE,      CBO|MBI,        CLO|MLI,        RO|MBI|OBI|CE,  OLO|MLI,        ALO|RI,         SCR,            0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //STL: 2c
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //
 
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             ALO|CXI,        ABO|CYI,        SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //CCI: 2d
@@ -832,11 +832,11 @@ GBE|GRI,        SCR,            0,              0,              0,              
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
 0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //
 
-(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //
+(CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             DSP,            FFO|MBI,        SPO|MLI,        RO|XBI|DSP,     SPO|MLI,        RO|XLI|DSP,     SPO|MLI,        RO|ABI|DSP,     SPO|MLI,        RO|ALI|DSP,     SPO|MLI,        RO|JB|DSP,
+SPO|MLI,        RO|JL|DSP,      IE,             SCR,            0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //RTI: fe
 
 (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  INH|CE|HLT,     INH|HLT,        0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //HLT
+0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,            //HLT: ff
 };
 
 PrintWriter output;
@@ -857,19 +857,20 @@ void setup(){
   }
   
   long[] interruptVector = {
-    (CBO|MBI)&~INH, (CLO|MLI)&~INH, (RO|IRI)&~INH,  CE,             0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
-    0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,              0,
+    0,                            0,                            0,                            0,                            (IRI)&~INH,                   (FFO|MBI)&~INH,               (SPO|MLI)&~INH,               (CLO|RI|ISP)&~INH,
+    (SPO|MLI)&~INH,               (CBO|RI|ISP)&~INH,            (SPO|MLI)&~INH,               (ALO|RI|ISP)&~INH,            (SPO|MLI)&~INH,               (ABO|RI|ISP)&~INH,            (SPO|MLI)&~INH,               (XLO|RI|ISP)&~INH,
+    (SPO|MLI)&~INH,               (XBO|RI|ISP)&~INH,            (FFO|MBI)&~INH,               (FFO|ALI)&~INH,               (XLI|XBI|BBI)&~INH,           (INX)&~INH,                   (XLO|BLI)&~INH,               (SUB|ELO|ALI)&~INH,
+    (ALO|MLI)&~INH,               (RO|JL)&~INH,                 (FFO|MLI)&~INH,               (RO|JB)&~INH,                 (KBO|ALI)&~INH,               (KRE)&~INH,                   SCR,                          0,
   };
   
   for(int j = 0; j < data.length; ++j){
-    String line = Long.toHexString(interruptVector[j - (j/16) * 16]);
+    String line = Long.toHexString(interruptVector[j - (j/32) * 32]);
     line = AddChars(line, '0', 16);
   
-    String lineNumber = Integer.toHexString(j);
+    String lineNumber = Integer.toHexString(0x1fff + j);
     lineNumber = AddChars(lineNumber, '0', 4);
     
     println(lineNumber + ": " + line);
-    println(line);
     output.println(lineNumber + ": " + line);
   }
   
